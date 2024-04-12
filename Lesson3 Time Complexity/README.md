@@ -26,7 +26,6 @@ X ≤ Y.
 
 ```
 import math
-
 def solution(X, Y, D):
     dis = Y - X #差多少距離
     return math.ceil(dis/D) #最少需要幾步
@@ -50,3 +49,12 @@ A[0] = 2 A[1] = 3 A[2] = 1 A[3] = 5 the function should return 4, as it is the m
 Write an efficient algorithm for the following assumptions:
 
 N is an integer within the range [0..100,000]; the elements of A are all distinct; each element of array A is an integer within the range [1..(N + 1)].
+
+```
+def solution(A):
+    N = len(A)
+    total_sum = (1 + (N + 1))*(N + 1) // 2  #正常總和
+    array_sum = sum(A) #目前總和
+    x = total_sum - array_sum #找到所缺失的
+    return x
+```
