@@ -24,6 +24,14 @@ Write an efficient algorithm for the following assumptions:
 X, Y and D are integers within the range [1..1,000,000,000];
 X ≤ Y.
 
+'
+import math
+
+def solution(X, Y, D):
+    dis = Y - X #差多少距離
+    return math.ceil(dis/D) #最少需要幾步
+'
+
 # PermMissingElem
 An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which means that exactly one element is missing.
 
